@@ -52,6 +52,12 @@ def get_product_customers(product_name):
     else:
         return "No customers found for this product."
 
+# Root route
+@app.route('/')
+def home():
+    return "Flask backend is running!"
+
+
 @app.route("/chat", methods=["POST"])
 def chat():
     user_input = request.json.get("user_input", "")
